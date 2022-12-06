@@ -41,6 +41,8 @@ console.log(inputUserKm);
 const inputUserAge = document.getElementById("userage");
 console.log(inputUserAge);
 
+// BOTTONI --------------------------------------
+
 const buttonGenerate = document.getElementById("generate");
 console.log(buttonGenerate);
 
@@ -71,17 +73,22 @@ const basePrice = inputFname * 0.21;
 let finalPrice = basePrice;
 
 // FLAG
-let discount = null;
+let discount = "Biglietto Standard";
 
 if(inputUserAge >= 65){
     finalPrice *= 0.6;
-    discount = "40%"
+    discount = "Biglietto con sconto del 40%"
 } else if (inputUserAge < 18){
     finalPrice *= 0.8;
-    discount = "20%"
+    discount = "Biglietto con sconto del 20%"
 }
 
 
 buttonGenerate.addEventListener('click', function (){
-nameOut.innerText = inputFname;
+
+nameOut.innerText = inputFname.value;
+
+ticketOut.innerText = discount;
+
+
 });
