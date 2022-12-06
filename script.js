@@ -95,24 +95,33 @@ let discount = null;
 if (inputUserAge.value = "Maggiorenne") {
     finalPrice *= 0.6;
     discount = "Biglietto con sconto del 40%";
-  } else if(inputUserAge.value = "Minorenne"){
-    finalPrice *= 0.8;
-    discount = "Biglietto con sconto del 20%";
   }
+
+if (inputUserAge.value = "Minorenne") {
+    finalPrice *= 0.8;
+     discount = "Biglietto con sconto del 20%";
+}
+
+
+const lettere = /^[A-Za-z]+$/;
 
 // RESULT
 inputUserKm.value;
 
 nameOut.innerText = inputFname.value;
 
+if (isNaN(inputUserKm.value) || (inputFname.value(letters) )  ){
+    alert ("Devi inserire un numero nei chilometri e solo lettere nel Nome e Cognome !")
+} else{
+    
 ticketOut.innerText = discount;
 
 carriage.innerText = Math.floor(random * maxCarriage)+1;
 
 cpcode.innerText = Math.floor(random * maxCpcode)+ minCpcode;
 
-ticketOutPrice.innerText = finalPrice;
-
+ticketOutPrice.innerText = finalPrice.toFixed(2) + "€";
+}
 });
 
 
