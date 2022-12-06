@@ -26,6 +26,11 @@ console.log("JS OK");
 
 
 //? 1 PRENDO I BOTTONI E L'IMPUT
-const fname = document.getElementById("fname");
+const inputFname = document.getElementById("fname");
+console.log(inputFname);
 
-console.log(fname);
+const inputUserKm = document.getElementById("userkm");
+console.log(inputUserKm);
+
+const inputUserAge = document.getElementById("userage");
+console.log(inputUserAge);
