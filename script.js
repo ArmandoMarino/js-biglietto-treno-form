@@ -38,7 +38,7 @@ console.log(inputFname);
 const inputUserKm = document.getElementById("userkm");
 console.log(inputUserKm);
 
-const inputUserAge = document.getElementById("userage");
+let inputUserAge = document.getElementById("userage");
 console.log(inputUserAge);
 
 // BOTTONI --------------------------------------
@@ -48,12 +48,6 @@ console.log(buttonGenerate);
 
 const buttonReset = document.getElementById("reset");
 console.log(buttonReset);
-
-
-
-
-
-
 
 // VARIABILE RANDOMICA
 const random = Math.random();
@@ -65,16 +59,18 @@ const maxCarriage = 5;
 const minCpcode = 10000;
 const maxCpcode = 95000;
 
+
+
+//! BUTTON GENERATE ------------------------------
+
 buttonGenerate.addEventListener('click', function (){
 
-
-    
 // OUTPUT-----------------------------------------
 
 const nameOut = document.getElementById("name");
 console.log(nameOut);
 
-let ticketOut = document.getElementById("ticket");
+const ticketOut = document.getElementById("ticket");
 console.log(ticketOut);
 
 const carriage = document.getElementById("carriage");
@@ -94,10 +90,10 @@ const basePrice = inputUserKm * 0.21;
 let finalPrice = basePrice;
 
 let discount = null;
-if(ticketOut = "Maggiorenne"){
+if(inputUserAge = "Maggiorenne"){
     finalPrice *= 0.6;
     discount = "Biglietto con sconto del 40%"
-} else if (ticketOut = "Minorenne"){
+} else if (inputUserAge = "Minorenne"){
     finalPrice *= 0.8;
     discount = "Biglietto con sconto del 20%"
 }
