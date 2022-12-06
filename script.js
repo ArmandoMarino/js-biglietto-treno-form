@@ -110,8 +110,8 @@ inputUserKm.value;
 
 nameOut.innerText = inputFname.value;
 
-if (isNaN(inputUserKm.value) || (inputFname.value(letters) )  ){
-    alert ("Devi inserire un numero nei chilometri e solo lettere nel Nome e Cognome !")
+if (isNaN(inputUserKm.value) ){
+    alert ("Devi inserire un numero !")
 } else{
     
 ticketOut.innerText = discount;
@@ -124,4 +124,6 @@ ticketOutPrice.innerText = finalPrice.toFixed(2) + "€";
 }
 });
 
+
+// (inputFname.value(letters)
 
