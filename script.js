@@ -32,14 +32,7 @@ console.log("JS OK");
 
 // INPUT--------------------------------------
 
-const inputFname = document.getElementById("fname");
-console.log(inputFname);
 
-const inputUserKm = document.getElementById("userkm");
-console.log(inputUserKm);
-
-let inputUserAge = document.getElementById("userage");
-console.log(inputUserAge);
 
 // BOTTONI --------------------------------------
 
@@ -66,6 +59,11 @@ const maxCpcode = 95000;
 buttonGenerate.addEventListener('click', function (){
 
 // OUTPUT-----------------------------------------
+const inputFname = document.getElementById("fname");
+console.log(inputFname);
+
+const inputUserKm = document.getElementById("userkm");
+console.log(inputUserKm);
 
 const nameOut = document.getElementById("name");
 console.log(nameOut);
@@ -82,19 +80,22 @@ console.log(cpcode);
 const ticketOutPrice = document.getElementById ("ticketprice");
 console.log(ticketOutPrice);
 
+let inputUserAge = document.getElementById("userage").value;
+console.log(inputUserAge);
+
 // CALCOLO PREZZO 
 // inputUserKm.value =
 
-const basePrice = inputUserKm * 0.21;
+const basePrice = inputUserKm.value * 0.21;
 
 let finalPrice = basePrice;
 
 let discount = null;
 
-if (inputUserAge = "Maggiorenne") {
+if (inputUserAge.value = "Maggiorenne") {
     finalPrice *= 0.6;
     discount = "Biglietto con sconto del 40%";
-  } else if (inputUserAge = "Minorenne"){
+  } else if(inputUserAge.value = "Minorenne"){
     finalPrice *= 0.8;
     discount = "Biglietto con sconto del 20%";
   }
