@@ -25,7 +25,11 @@ console.log("JS OK");
 // per indicare i centesimi sul prezzo).
 
 
-//? 1 PRENDO I BOTTONI E L'IMPUT
+
+
+
+// 1 PRENDO I BOTTONI E L'IMPUT
+
 const inputFname = document.getElementById("fname");
 console.log(inputFname);
 
@@ -40,3 +44,20 @@ console.log(buttonGenerate);
 
 const buttonReset = document.getElementById("reset");
 console.log(buttonReset);
+
+// CALCOLO PREZZO 
+const basePrice = inputFname * 0.21;
+
+let finalPrice = basePrice;
+
+// FLAG
+let discount = null;
+
+if(inputUserAge >= 65){
+    finalPrice *= 0.6;
+    discount = "40%"
+
+} else ( inputUserAge < 18){
+    finalPrice *= 0.8;
+    discount = "20%"
+}
