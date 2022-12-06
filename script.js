@@ -68,7 +68,7 @@ console.log(ticketOutPrice);
 
 
 // CALCOLO PREZZO 
-const basePrice = inputFname * 0.21;
+const basePrice = inputUserKm * 0.21;
 
 let finalPrice = basePrice;
 
@@ -82,6 +82,8 @@ if(inputUserAge >= 65){
     finalPrice *= 0.8;
     discount = "Biglietto con sconto del 20%"
 }
+
+console.log( basePrice );
 
 // VARIABILE RANDOMICA
 const random = Math.random();
@@ -103,5 +105,6 @@ carriage.innerText = Math.floor(random * maxCarriage)+1;
 
 cpcode.innerText = Math.floor(random * maxCpcode)+ minCpcode;
 
+ticketOutPrice.innerText = finalPrice;
 
 });
