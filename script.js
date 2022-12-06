@@ -51,12 +51,7 @@ console.log(buttonReset);
 
 
 
-// CALCOLO PREZZO 
-// inputUserKm.value =
 
-const basePrice = inputUserKm * 0.21;
-
-let finalPrice = basePrice;
 
 
 
@@ -82,14 +77,6 @@ console.log(nameOut);
 let ticketOut = document.getElementById("ticket");
 console.log(ticketOut);
 
-if(ticketOut = "Maggiorenne"){
-    finalPrice *= 0.6;
-    discount = "Biglietto con sconto del 40%"
-} else if (ticketOut = "Minorenne"){
-    finalPrice *= 0.8;
-    discount = "Biglietto con sconto del 20%"
-}
-
 const carriage = document.getElementById("carriage");
 console.log(carriage);
 
@@ -99,17 +86,28 @@ console.log(cpcode);
 const ticketOutPrice = document.getElementById ("ticketprice");
 console.log(ticketOutPrice);
 
+// CALCOLO PREZZO 
+// inputUserKm.value =
 
-// FLAG
+const basePrice = inputUserKm * 0.21;
 
+let finalPrice = basePrice;
 
+let discount = null;
+if(ticketOut = "Maggiorenne"){
+    finalPrice *= 0.6;
+    discount = "Biglietto con sconto del 40%"
+} else if (ticketOut = "Minorenne"){
+    finalPrice *= 0.8;
+    discount = "Biglietto con sconto del 20%"
+}
 
-
+// RESULT
 inputUserKm.value;
 
 nameOut.innerText = inputFname.value;
 
-ticketOut.innerText = ticketOut;
+ticketOut.innerText = discount;
 
 carriage.innerText = Math.floor(random * maxCarriage)+1;
 
