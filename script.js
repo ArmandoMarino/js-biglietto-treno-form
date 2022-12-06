@@ -34,3 +34,9 @@ console.log(inputUserKm);
 
 const inputUserAge = document.getElementById("userage");
 console.log(inputUserAge);
+
+const buttonGenerate = document.getElementById("generate");
+console.log(buttonGenerate);
+
+const buttonReset = document.getElementById("reset");
+console.log(buttonReset);
