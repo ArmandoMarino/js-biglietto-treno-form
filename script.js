@@ -81,7 +81,7 @@ const ticketOutPrice = document.getElementById ("ticketprice");
 console.log(ticketOutPrice);
 
 let inputUserAge = document.getElementById("userage").value;
-console.log(inputUserAge);
+console.log(inputUserAge.value);
 
 // CALCOLO PREZZO 
 // inputUserKm.value =
@@ -92,12 +92,12 @@ let finalPrice = basePrice;
 
 let discount = null;
 
-if (inputUserAge.value = "Maggiorenne") {
+if (inputUserAge.value = "major") {
     finalPrice *= 0.6;
     discount = "Biglietto con sconto del 40%";
   }
 
-if (inputUserAge.value = "Minorenne") {
+if (inputUserAge.value = "minor") {
     finalPrice *= 0.8;
      discount = "Biglietto con sconto del 20%";
 }
@@ -126,4 +126,3 @@ ticketOutPrice.innerText = finalPrice.toFixed(2) + "€";
 
 
 // (inputFname.value(letters)
-
