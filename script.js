@@ -49,41 +49,16 @@ console.log(buttonGenerate);
 const buttonReset = document.getElementById("reset");
 console.log(buttonReset);
 
-// OUTPUT-----------------------------------------
-
-const nameOut = document.getElementById("name");
-console.log(nameOut);
-
-const ticketOut = document.getElementById("ticket");
-console.log(ticketOut);
-
-const carriage = document.getElementById("carriage");
-console.log(carriage);
-
-const cpcode = document.getElementById("cpcode");
-console.log(cpcode);
-
-const ticketOutPrice = document.getElementById ("ticketprice");
-console.log(ticketOutPrice);
 
 
 // CALCOLO PREZZO 
+// inputUserKm.value =
+
 const basePrice = inputUserKm * 0.21;
 
 let finalPrice = basePrice;
 
-// FLAG
-let discount = "Biglietto Standard";
 
-if(inputUserAge >= 65){
-    finalPrice *= 0.6;
-    discount = "Biglietto con sconto del 40%"
-} else if (inputUserAge < 18){
-    finalPrice *= 0.8;
-    discount = "Biglietto con sconto del 20%"
-}
-
-console.log( basePrice );
 
 // VARIABILE RANDOMICA
 const random = Math.random();
@@ -97,9 +72,44 @@ const maxCpcode = 95000;
 
 buttonGenerate.addEventListener('click', function (){
 
+
+    
+// OUTPUT-----------------------------------------
+
+const nameOut = document.getElementById("name");
+console.log(nameOut);
+
+let ticketOut = document.getElementById("ticket");
+console.log(ticketOut);
+
+if(ticketOut = "Maggiorenne"){
+    finalPrice *= 0.6;
+    discount = "Biglietto con sconto del 40%"
+} else if (ticketOut = "Minorenne"){
+    finalPrice *= 0.8;
+    discount = "Biglietto con sconto del 20%"
+}
+
+const carriage = document.getElementById("carriage");
+console.log(carriage);
+
+const cpcode = document.getElementById("cpcode");
+console.log(cpcode);
+
+const ticketOutPrice = document.getElementById ("ticketprice");
+console.log(ticketOutPrice);
+
+
+// FLAG
+
+
+
+
+inputUserKm.value;
+
 nameOut.innerText = inputFname.value;
 
-ticketOut.innerText = discount;
+ticketOut.innerText = ticketOut;
 
 carriage.innerText = Math.floor(random * maxCarriage)+1;
 
@@ -108,3 +118,5 @@ cpcode.innerText = Math.floor(random * maxCpcode)+ minCpcode;
 ticketOutPrice.innerText = finalPrice;
 
 });
+
+
