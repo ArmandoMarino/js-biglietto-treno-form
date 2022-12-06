@@ -56,8 +56,7 @@ let discount = null;
 if(inputUserAge >= 65){
     finalPrice *= 0.6;
     discount = "40%"
-
-} else ( inputUserAge < 18){
+} else if (inputUserAge < 18){
     finalPrice *= 0.8;
     discount = "20%"
 }
