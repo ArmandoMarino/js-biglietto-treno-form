@@ -90,13 +90,14 @@ const basePrice = inputUserKm * 0.21;
 let finalPrice = basePrice;
 
 let discount = null;
-if(inputUserAge = "Maggiorenne"){
+
+if (inputUserAge = "Maggiorenne") {
     finalPrice *= 0.6;
-    discount = "Biglietto con sconto del 40%"
-} else if (inputUserAge = "Minorenne"){
+    discount = "Biglietto con sconto del 40%";
+  } else if (inputUserAge = "Minorenne"){
     finalPrice *= 0.8;
-    discount = "Biglietto con sconto del 20%"
-}
+    discount = "Biglietto con sconto del 20%";
+  }
 
 // RESULT
 inputUserKm.value;
