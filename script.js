@@ -28,7 +28,9 @@ console.log("JS OK");
 
 
 
-// 1 PRENDO I BOTTONI E L'IMPUT
+// 1 PRENDO GLI OGGETTI DALLA PAGINA
+
+// INPUT--------------------------------------
 
 const inputFname = document.getElementById("fname");
 console.log(inputFname);
@@ -45,6 +47,24 @@ console.log(buttonGenerate);
 const buttonReset = document.getElementById("reset");
 console.log(buttonReset);
 
+// OUTPUT-----------------------------------------
+
+const nameOut = document.getElementById("name");
+console.log(nameOut);
+
+const ticketOut = document.getElementById("ticket");
+console.log(ticketOut);
+
+const carriage = document.getElementById("carriage");
+console.log(carriage);
+
+const cpcode = document.getElementById("cpcode");
+console.log(cpcode);
+
+const ticketOutPrice = document.getElementById ("ticketprice");
+console.log(ticketOutPrice);
+
+
 // CALCOLO PREZZO 
 const basePrice = inputFname * 0.21;
 
@@ -60,3 +80,8 @@ if(inputUserAge >= 65){
     finalPrice *= 0.8;
     discount = "20%"
 }
+
+
+buttonGenerate.addEventListener('click', function (){
+nameOut.innerText = inputFname;
+});
