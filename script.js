@@ -83,12 +83,25 @@ if(inputUserAge >= 65){
     discount = "Biglietto con sconto del 20%"
 }
 
+// VARIABILE RANDOMICA
+const random = Math.random();
+
+// VARIABILI CARROZZA
+const maxCarriage = 5;
+
+// VARIABILI CODICE CP
+const minCpcode = 10000;
+const maxCpcode = 95000;
 
 buttonGenerate.addEventListener('click', function (){
 
 nameOut.innerText = inputFname.value;
 
 ticketOut.innerText = discount;
+
+carriage.innerText = Math.floor(random * maxCarriage)+1;
+
+cpcode.innerText = Math.floor(random * maxCpcode)+ minCpcode;
 
 
 });
